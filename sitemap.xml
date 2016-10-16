@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://magicdavid.top/tags/index.html</loc>
+    
+    <lastmod>2016-10-16T11:52:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://magicdavid.top/2016/10/16/Sublime%E7%9A%84Markdown%E6%8F%92%E4%BB%B6%EF%BC%9AMarkDown%20Editing%20%E5%92%8C%20OmniMarkupPreviewer/</loc>
     
     <lastmod>2016-10-16T11:48:33.000Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://magicdavid.top/categories/index.html</loc>
     
     <lastmod>2016-10-12T10:38:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://magicdavid.top/tags/index.html</loc>
-    
-    <lastmod>2016-10-12T10:37:12.000Z</lastmod>
     
   </url>
   
