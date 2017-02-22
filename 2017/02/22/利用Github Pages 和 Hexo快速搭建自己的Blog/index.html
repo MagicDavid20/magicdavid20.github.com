@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>利用Github Pages 和 Hexo快速搭建自己的Blog | MagicDavid&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="利用Github Pages 和 Hexo快速搭建自己的Blog。">
+  <meta name="description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用Github Pages 和 Hexo快速搭建自己的Blog">
 <meta property="og:url" content="http://magicdavid.top/2017/02/22/利用Github Pages 和 Hexo快速搭建自己的Blog/index.html">
 <meta property="og:site_name" content="MagicDavid's BLOG">
-<meta property="og:description" content="利用Github Pages 和 Hexo快速搭建自己的Blog。">
+<meta property="og:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
 <meta property="og:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/what_is_github_pages.png">
-<meta property="og:updated_time" content="2017-02-22T15:22:23.000Z">
+<meta property="og:updated_time" content="2017-02-22T15:29:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Github Pages 和 Hexo快速搭建自己的Blog">
-<meta name="twitter:description" content="利用Github Pages 和 Hexo快速搭建自己的Blog。">
+<meta name="twitter:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/what_is_github_pages.png">
   
     <link rel="alternative" href="/atom.xml" title="MagicDavid&#39;s BLOG" type="application/atom+xml">
@@ -150,7 +150,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>利用Github Pages 和 Hexo快速搭建自己的Blog。<br><a id="more"></a></p>
+        <p>本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。<br><a id="more"></a></p>
 <h4 id="什么是GithubPages"><a href="#什么是GithubPages" class="headerlink" title="什么是GithubPages:"></a>什么是GithubPages:</h4><p><img src="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/what_is_github_pages.png" alt="什么是GithubPages"></p>
 <pre><code>Github Pages 是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在Github 上，你可以选择使用Github Pages 默认提供的域名 github.io 或者自定义域名来发布站点。
 </code></pre><h4 id="如何创建GithubPages"><a href="#如何创建GithubPages" class="headerlink" title="如何创建GithubPages"></a>如何创建GithubPages</h4><pre><code>假设你已经拥有github账号了。创建一个repository，命名格式为 yourusername.github.io (例如我这里就是 magicdavid20.github.io， 这种每个账号只能创建一个)。 
@@ -167,26 +167,29 @@
 </li>
 <li><p>安装Hexo</p>
 <ul>
-<li><figure class="highlight plain"><figcaption><span>npm install -g hexo-cli ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3. 创建</div><div class="line">    - 在指定文件夹目录下 ``` $ hexo init</div></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><figcaption><span>npm install -g hexo-cli ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3.  创建</div><div class="line">    - 在指定文件夹目录下 ``` $ hexo init</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装依赖包 <figure class="highlight plain"><figcaption><span>npm install ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">        </div><div class="line">4. 生成静态文件</div><div class="line">    - ``` $ hexo generate</div></pre></td></tr></table></figure></p>
+<li><p>安装依赖包 <figure class="highlight plain"><figcaption><span>npm install ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4.  生成静态文件</div><div class="line">    - ``` $ hexo generate</div></pre></td></tr></table></figure></p>
 </li>
 </ul>
 </li>
 <li><p>服务器部署</p>
 <ul>
-<li><figure class="highlight plain"><figcaption><span>hexo server ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    - 访问 http://localhost:4000 ，可以本地预览了</div><div class="line">    </div><div class="line">6. 部署配置</div><div class="line">    - 在文件_config.yml中</div></pre></td></tr></table></figure>
-<p>deploy:<br>  type: git<br>  repo:<br>  github: <a href="https://github.com/MagicDavid20/magicdavid20.github.io.git,master" target="_blank" rel="external">https://github.com/MagicDavid20/magicdavid20.github.io.git,master</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    - 配置晚了就可以通过 ```$ hexo deploy ``` 部署到服务器</div><div class="line"></div><div class="line">7. 修改配置 </div><div class="line">    - 如果要修改配置的话， 可根据文档修改 _config.yml [配置说明](https://hexo.io/zh-cn/docs/configuration.html)。</div><div class="line">    </div><div class="line">#### 如何写博客</div><div class="line">1. ```hexo new &quot;my new post&quot; ``` 这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。</div><div class="line">文件格式如下</div></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><figcaption><span>hexo server ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    - 访问 http://localhost:4000 ，可以本地预览了</div><div class="line"></div><div class="line">6.  部署配置</div><div class="line">    - 在文件_config.yml中</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>deploy:</p>
+<pre><code>type: git
+repo:
+github: https://github.com/MagicDavid20/magicdavid20.github.io.git,master
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    - 配置晚了就可以通过 ```$ hexo deploy ``` 部署到服务器</div><div class="line"></div><div class="line">7.  修改配置 </div><div class="line">    - 如果要修改配置的话， 可根据文档修改 _config.yml [配置说明](https://hexo.io/zh-cn/docs/configuration.html)。</div><div class="line"></div><div class="line">#### 如何写博客</div><div class="line">1. ```hexo new &quot;my new post&quot; ``` 这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。</div><div class="line">   文件格式如下</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>title: my new post #可以改成中文的，如“新文章”<br>date: 2017-2-21  #发表日期，一般不改动</p>
 <h2 id="tags-blog-文章标签"><a href="#tags-blog-文章标签" class="headerlink" title="tags: [blog] #文章标签"></a>tags: [blog] #文章标签</h2><p>#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上<br><!--more-->，在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2. ``` $ hexo generate ``` 生成静态文件， 可简写为 ``` $ hexo g</div></pre></td></tr></table></figure>
 <ol>
-<li><figure class="highlight plain"><figcaption><span>hexo deploy ``` 部署到服务器， 这里就是指部署到github上，可简写为 ``` $ hexo d ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">4. 此时可以在 [yourusername.github.io](http://magicdavid20.github.io)上看到你的文章啦</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">#### 切换主题</div><div class="line">1. 主题的安装：在网上搜寻喜欢的主题，将主题下载到 theme路径下。</div><div class="line">2. config.yml配置文件中的theme属性，将其设置为你下载的主题名。</div><div class="line">3. 重生生成并部署， 此时浏览你的blog就是新的主题啦。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 评论系统</div><div class="line">1. 评论系统我用的多说。</div><div class="line">2. 在[多说网站](http://duoshuo.com/)创建一个新的站点, 根据提示填写就ok。</div><div class="line">3. 在hexo使用的主题下的_config.yml填写对应代码。我这里用的主题是 yilia，在duoshuo: magicdavid20 这里填在多说申请的项目名就行。 </div><div class="line">4. 生成并部署就好了。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 计数系统</div><div class="line">1. 计数系统我用的 不蒜子</div><div class="line">2. 根据 [不蒜子](http://ibruce.info/2015/04/04/busuanzi/) 的文档</div><div class="line">    ``` </div><div class="line">    &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><figcaption><span>hexo deploy ``` 部署到服务器， 这里就是指部署到github上，可简写为 ``` $ hexo d ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">4. 此时可以在 [yourusername.github.io](http://magicdavid20.github.io)上看到你的文章啦</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">#### 切换主题</div><div class="line">1. 主题的安装：在网上搜寻喜欢的主题，将主题下载到 theme路径下。</div><div class="line">2. config.yml配置文件中的theme属性，将其设置为你下载的主题名。</div><div class="line">3. 重生生成并部署， 此时浏览你的blog就是新的主题啦。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 评论系统</div><div class="line">1. 评论系统我用的多说。</div><div class="line">2. 在[多说网站](http://duoshuo.com/)创建一个新的站点, 根据提示填写就ok。</div><div class="line">3. 在hexo使用的主题下的_config.yml填写对应代码。我这里用的主题是 yilia，在duoshuo: magicdavid20 这里填在多说申请的项目名就行。 </div><div class="line">4. 生成并部署就好了。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 计数系统</div><div class="line">1.  计数系统我用的 不蒜子</div><div class="line">2.  根据 [不蒜子](http://ibruce.info/2015/04/04/busuanzi/) 的文档</div><div class="line">     ``` </div><div class="line">     &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">     &lt;/script&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li>不蒜子可以给任何类型的个人站点使用，如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加上述脚本即可，当然你也可以添加到 header 中。</li>
 <li>显示站点总访问量、显示单页面访问量这些根据文档配置就行。</li>
@@ -211,6 +214,11 @@
   	<time datetime="2017-02-22T15:20:07.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-02-22</time>
 </a>
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+	</div>
+
       
 
       <div class="clearfix"></div>
@@ -339,7 +347,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a>
+    				<a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
     			</div>
     	</section>
     
