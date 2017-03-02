@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="MagicDavid's BLOG">
 <meta property="og:description" content="本文主要介绍Git的一些入门知识。">
 <meta property="og:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/0.jpg">
-<meta property="og:updated_time" content="2017-03-02T13:30:03.000Z">
+<meta property="og:updated_time" content="2017-03-02T13:35:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 入门">
 <meta name="twitter:description" content="本文主要介绍Git的一些入门知识。">
@@ -173,11 +173,21 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/0.jpg" alt=""></p>
 <ul>
-<li>远成仓库协作: ssh是一种网络协议， 用于加密登录。Git服务器采用SSH公钥来进行授权，安装ssh Linux和Mac标配， windows上的Git Bash也带了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa  // 指定rsa算法生成秘钥</div><div class="line">// id_rsa 是密钥，id_rsa.pub 就是公钥</div><div class="line">// 添加id_rsa.pub 的内容添加到 GitHub，这样你本地的 id_rsa 密钥跟 GitHub 上的 id_rsa.pub 公钥进行配对，授权成功就可以提交代码。</div><div class="line">``` </div><div class="line"></div><div class="line">- gitignore文件: 在项目根目录创建.gitignore文件，在提交时可忽略指定文件。 在文件中列出不需要提交的文件名，文件夹名，每个一行。 .gitignore文件需要提交，就像普通文件一样。</div></pre></td></tr></table></figure>
+<li><p>远成仓库协作: ssh是一种网络协议， 用于加密登录。Git服务器采用SSH公钥来进行授权，安装ssh Linux和Mac标配， windows上的Git Bash也带了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa  // 指定rsa算法生成秘钥</div><div class="line">// id_rsa 是密钥，id_rsa.pub 就是公钥</div><div class="line">// 添加id_rsa.pub 的内容添加到 GitHub，这样你本地的 id_rsa 密钥跟 GitHub 上的 id_rsa.pub 公钥进行配对，授权成功就可以提交代码。</div></pre></td></tr></table></figure>
+</li>
+<li><p>gitignore文件: 在项目根目录创建.gitignore文件，在提交时可忽略指定文件。 在文件中列出不需要提交的文件名，文件夹名，每个一行。 .gitignore文件需要提交，就像普通文件一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*.sln   // 忽略 .sln类型文件</div><div class="line">Temp/   // 忽略 Temp路径下文件</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>*.sln   // 忽略 .sln类型文件<br>Temp/   // 忽略 Temp路径下文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">#### 安装Git</div><div class="line">- 安装Git，在[Git官网](https://git-scm.com/downloads)可以搞定这一步。</div><div class="line"></div><div class="line"></div><div class="line">#### 配置Git</div></pre></td></tr></table></figure></p>
-<p>git config –global user.name “My Name”<br>git config –global user.email myEmail@example.com<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 获取与创建仓库</div><div class="line">仓库是 Git 存放你要保存的快照的数据的地方，有两种获得途径。</div><div class="line">- 本地创建: 创建新文件夹，打开， 执行 ``` git init ```，创建一个新的本地git仓库</div><div class="line">- 克隆远端: ``` git clone https://github.com/topameng/tolua.git ```, 克隆 github 上的仓库， 在本地创建一个新的仓库，并自动将github分支设为远端分支 </div><div class="line"></div><div class="line"></div><div class="line">#### 修改和提交</div></pre></td></tr></table></figure></p>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><ul>
+<li>安装Git，在<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git官网</a>可以搞定这一步。</li>
+</ul>
+<h4 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;My Name&quot;    </div><div class="line">git config --global user.email myEmail@example.com</div></pre></td></tr></table></figure>
+<h4 id="获取与创建仓库"><a href="#获取与创建仓库" class="headerlink" title="获取与创建仓库"></a>获取与创建仓库</h4><p>仓库是 Git 存放你要保存的快照的数据的地方，有两种获得途径。</p>
+<ul>
+<li>本地创建: 创建新文件夹，打开， 执行 <figure class="highlight plain"><figcaption><span>init ```，创建一个新的本地git仓库</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 克隆远端: ``` git clone https://github.com/topameng/tolua.git ```, 克隆 github 上的仓库， 在本地创建一个新的仓库，并自动将github分支设为远端分支 </div><div class="line"></div><div class="line"></div><div class="line">#### 修改和提交</div></pre></td></tr></table></figure></li>
+</ul>
 <p>// 查看文件在缓存与当前工作目录的状态:<br>git status </p>
 <p>// 显示已写入缓存与已修改但尚未写入缓存的改动的区别<br>git diff </p>
 <p>// 查看已缓存的改动<br>git diff –cached</p>
@@ -227,7 +237,7 @@
 <p>// 丢弃你在本地的所有改动与提交<br>git fetch origin<br>git reset –hard origin/master</p>
 <p>// git删除本地所有未提交的更改，包括修改的、新增的、删除的，还有一些编译生成的临时文件。回到上一版本的干净状态.<br>// 如果有修改加入暂存区<br>git reset –hard<br>git clean -xdf </p>
 <p>// 如果没有加入暂存区<br>git checkout .<br>git clean -xdf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### tips</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### tips</div></pre></td></tr></table></figure>
 <p>// 内建的图形化 git：<br>gitk</p>
 <p>// 彩色的 git 输出：<br>git config color.ui true</p>
 <p>// 显示历史记录时，每个提交的信息只显示一行：<br>git config format.pretty oneline</p>
