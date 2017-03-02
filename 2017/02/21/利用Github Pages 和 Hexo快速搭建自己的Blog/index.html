@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="MagicDavid's BLOG">
 <meta property="og:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
 <meta property="og:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/what_is_github_pages.png">
-<meta property="og:updated_time" content="2017-03-02T13:19:21.000Z">
+<meta property="og:updated_time" content="2017-03-02T13:21:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Github Pages 和 Hexo快速搭建自己的Blog">
 <meta name="twitter:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
@@ -192,16 +192,42 @@
 <li><p>在文件_config.yml中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo:</div><div class="line">    github: https://github.com/MagicDavid20/magicdavid20.github.io.git,master</div></pre></td></tr></table></figure>
 </li>
-<li><p>配置完了就可以通过 <figure class="highlight plain"><figcaption><span>hexo deploy ``` 部署到服务器</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">7.  修改配置 </div><div class="line">    - 如果要修改配置的话， 可根据文档修改 _config.yml [配置说明](https://hexo.io/zh-cn/docs/configuration.html)。</div><div class="line"></div><div class="line">#### 如何写博客</div><div class="line">1. hexo new &quot;my new post&quot;</div><div class="line">这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。</div><div class="line">文件格式如下</div></pre></td></tr></table></figure></p>
+<li><p>配置完了就可以通过 $ hexo deploy  部署到服务器</p>
 </li>
 </ul>
 </li>
 </ol>
-<p>title: my new post #可以改成中文的，如“新文章”<br>date: 2017-2-21  #发表日期，一般不改动</p>
-<h2 id="tags-blog-文章标签"><a href="#tags-blog-文章标签" class="headerlink" title="tags: [blog] #文章标签"></a>tags: [blog] #文章标签</h2><p>#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上<br><!--more-->，在<!--more-->之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2. ``` $ hexo generate ``` 生成静态文件， 可简写为 ``` $ hexo g</div></pre></td></tr></table></figure>
 <ol>
-<li><figure class="highlight plain"><figcaption><span>hexo deploy ``` 部署到服务器， 这里就是指部署到github上，可简写为 ``` $ hexo d ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">4. 此时可以在 [yourusername.github.io](http://magicdavid20.github.io)上看到你的文章啦</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">#### 切换主题</div><div class="line">1. 主题的安装：在网上搜寻喜欢的主题，将主题下载到 theme路径下。</div><div class="line">2. config.yml配置文件中的theme属性，将其设置为你下载的主题名。</div><div class="line">3. 重生生成并部署， 此时浏览你的blog就是新的主题啦。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 评论系统</div><div class="line">1. 评论系统我用的多说。</div><div class="line">2. 在[多说网站](http://duoshuo.com/)创建一个新的站点, 根据提示填写就ok。</div><div class="line">3. 在hexo使用的主题下的_config.yml填写对应代码。我这里用的主题是 yilia，在duoshuo: magicdavid20 这里填在多说申请的项目名就行。 </div><div class="line">4. 生成并部署就好了。</div><div class="line"></div><div class="line"></div><div class="line">#### 添加 计数系统</div><div class="line">1.  计数系统我用的 不蒜子</div><div class="line">2.  根据 [不蒜子](http://ibruce.info/2015/04/04/busuanzi/) 的文档</div><div class="line">      ``` </div><div class="line">      &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">      &lt;/script&gt;</div></pre></td></tr></table></figure>
+<li>修改配置 <ul>
+<li>如果要修改配置的话， 可根据文档修改 _config.yml <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置说明</a>。</li>
+</ul>
+</li>
+</ol>
+<h4 id="如何写博客"><a href="#如何写博客" class="headerlink" title="如何写博客"></a>如何写博客</h4><ol>
+<li><p>hexo new “my new post”<br>这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。<br>文件格式如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: my new post #可以改成中文的，如“新文章”</div><div class="line">date: 2017-2-21  #发表日期，一般不改动</div><div class="line">tags: [blog] #文章标签</div><div class="line">---</div><div class="line">#这里是正文，用markdown写，你可以选择写一段显示在首页的简介后，加上</div><div class="line">&lt;!--more--&gt;，在&lt;!--more--&gt;之前的内容会显示在首页，之后的内容会被隐藏，当游客点击Read more才能看到。</div></pre></td></tr></table></figure>
+</li>
+<li><p>$ hexo generate 生成静态文件， 可简写为  $ hexo g </p>
+</li>
+<li>$ hexo deploy  部署到服务器， 这里就是指部署到github上，可简写为 $ hexo d </li>
+<li>此时可以在 <a href="http://magicdavid20.github.io" target="_blank" rel="external">yourusername.github.io</a>上看到你的文章啦</li>
+</ol>
+<hr>
+<h4 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h4><ol>
+<li>主题的安装：在网上搜寻喜欢的主题，将主题下载到 theme路径下。</li>
+<li>config.yml配置文件中的theme属性，将其设置为你下载的主题名。</li>
+<li>重生生成并部署， 此时浏览你的blog就是新的主题啦。</li>
+</ol>
+<h4 id="添加-评论系统"><a href="#添加-评论系统" class="headerlink" title="添加 评论系统"></a>添加 评论系统</h4><ol>
+<li>评论系统我用的多说。</li>
+<li>在<a href="http://duoshuo.com/" target="_blank" rel="external">多说网站</a>创建一个新的站点, 根据提示填写就ok。</li>
+<li>在hexo使用的主题下的_config.yml填写对应代码。我这里用的主题是 yilia，在duoshuo: magicdavid20 这里填在多说申请的项目名就行。 </li>
+<li>生成并部署就好了。</li>
+</ol>
+<h4 id="添加-计数系统"><a href="#添加-计数系统" class="headerlink" title="添加 计数系统"></a>添加 计数系统</h4><ol>
+<li>计数系统我用的 不蒜子</li>
+<li><p>根据 <a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a> 的文档</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li>不蒜子可以给任何类型的个人站点使用，如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加上述脚本即可，当然你也可以添加到 header 中。</li>
 <li>显示站点总访问量、显示单页面访问量这些根据文档配置就行。</li>
