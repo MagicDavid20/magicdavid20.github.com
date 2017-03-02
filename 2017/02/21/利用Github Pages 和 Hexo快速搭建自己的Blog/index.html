@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="MagicDavid's BLOG">
 <meta property="og:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
 <meta property="og:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/what_is_github_pages.png">
-<meta property="og:updated_time" content="2017-02-22T15:31:17.000Z">
+<meta property="og:updated_time" content="2017-03-02T13:17:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Github Pages 和 Hexo快速搭建自己的Blog">
 <meta name="twitter:description" content="本文主要介绍如何利用Github Pages 和 Hexo快速搭建自己的Blog。">
@@ -167,22 +167,34 @@
 </li>
 <li><p>安装Hexo</p>
 <ul>
-<li><figure class="highlight plain"><figcaption><span>npm install -g hexo-cli ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3.  创建</div><div class="line">    - 在指定文件夹目录下 ``` $ hexo init</div></pre></td></tr></table></figure>
+<li>$ npm install -g hexo-cli</li>
+</ul>
 </li>
-<li><p>安装依赖包 <figure class="highlight plain"><figcaption><span>npm install ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4.  生成静态文件</div><div class="line">    - ``` $ hexo generate</div></pre></td></tr></table></figure></p>
+<li><p>创建</p>
+<ul>
+<li>在指定文件夹目录下  $ hexo init </li>
+<li>安装依赖包  $ npm install </li>
+</ul>
 </li>
+<li><p>生成静态文件</p>
+<ul>
+<li>$ hexo generate </li>
 </ul>
 </li>
 <li><p>服务器部署</p>
 <ul>
-<li><figure class="highlight plain"><figcaption><span>hexo server ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    - 访问 http://localhost:4000 ，可以本地预览了</div><div class="line"></div><div class="line">6.  部署配置</div><div class="line">    - 在文件_config.yml中</div></pre></td></tr></table></figure>
+<li>$ hexo server </li>
+<li>访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，可以本地预览了</li>
+</ul>
+</li>
+<li><p>部署配置</p>
+<ul>
+<li><p>在文件_config.yml中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo:</div><div class="line">    github: https://github.com/MagicDavid20/magicdavid20.github.io.git,master</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置完了就可以通过 <figure class="highlight plain"><figcaption><span>hexo deploy ``` 部署到服务器</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">7.  修改配置 </div><div class="line">    - 如果要修改配置的话， 可根据文档修改 _config.yml [配置说明](https://hexo.io/zh-cn/docs/configuration.html)。</div><div class="line"></div><div class="line">#### 如何写博客</div><div class="line">1. hexo new &quot;my new post&quot;</div><div class="line">这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。</div><div class="line">文件格式如下</div></pre></td></tr></table></figure></p>
 </li>
 </ul>
-<p>deploy:</p>
-<pre><code>type: git
-repo:
-github: https://github.com/MagicDavid20/magicdavid20.github.io.git,master
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    - 配置晚了就可以通过 ```$ hexo deploy ``` 部署到服务器</div><div class="line"></div><div class="line">7.  修改配置 </div><div class="line">    - 如果要修改配置的话， 可根据文档修改 _config.yml [配置说明](https://hexo.io/zh-cn/docs/configuration.html)。</div><div class="line"></div><div class="line">#### 如何写博客</div><div class="line">1. ```hexo new &quot;my new post&quot; ``` 这就创建了一篇新文章。此时在source_pos中可以找到对应的md文件。</div><div class="line">   文件格式如下</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>title: my new post #可以改成中文的，如“新文章”<br>date: 2017-2-21  #发表日期，一般不改动</p>
