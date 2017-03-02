@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="MagicDavid's BLOG">
 <meta property="og:description" content="本文主要介绍Git的一些入门知识。">
 <meta property="og:image" content="https://raw.githubusercontent.com/MagicDavid20/ResForBlog/master/pics/0.jpg">
-<meta property="og:updated_time" content="2017-03-02T13:35:22.000Z">
+<meta property="og:updated_time" content="2017-03-02T13:41:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 入门">
 <meta name="twitter:description" content="本文主要介绍Git的一些入门知识。">
@@ -158,8 +158,10 @@
 </li>
 <li><p>git和svn的比较</p>
 <ul>
-<li>git比svn快。</li>
+<li>git比svn快。<ul>
 <li>git是分布式的， svn是集中式的。这个特性使得git可以离线开发。</li>
+</ul>
+</li>
 <li>git把内容按元数据方式存储，而SVN是按文件</li>
 <li>git的分支比svn的分支方便，安全，快速。</li>
 </ul>
@@ -186,62 +188,20 @@
 <h4 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;My Name&quot;    </div><div class="line">git config --global user.email myEmail@example.com</div></pre></td></tr></table></figure>
 <h4 id="获取与创建仓库"><a href="#获取与创建仓库" class="headerlink" title="获取与创建仓库"></a>获取与创建仓库</h4><p>仓库是 Git 存放你要保存的快照的数据的地方，有两种获得途径。</p>
 <ul>
-<li>本地创建: 创建新文件夹，打开， 执行 <figure class="highlight plain"><figcaption><span>init ```，创建一个新的本地git仓库</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 克隆远端: ``` git clone https://github.com/topameng/tolua.git ```, 克隆 github 上的仓库， 在本地创建一个新的仓库，并自动将github分支设为远端分支 </div><div class="line"></div><div class="line"></div><div class="line">#### 修改和提交</div></pre></td></tr></table></figure></li>
+<li>本地创建: 创建新文件夹，打开， 执行 git init ，创建一个新的本地git仓库</li>
+<li>克隆远端:  git clone <a href="https://github.com/topameng/tolua.git" target="_blank" rel="external">https://github.com/topameng/tolua.git</a> , 克隆 github 上的仓库， 在本地创建一个新的仓库，并自动将github分支设为远端分支 </li>
 </ul>
-<p>// 查看文件在缓存与当前工作目录的状态:<br>git status </p>
-<p>// 显示已写入缓存与已修改但尚未写入缓存的改动的区别<br>git diff </p>
-<p>// 查看已缓存的改动<br>git diff –cached</p>
-<p>// 查看已缓存的与未缓存的所有改动<br>git diff HEAD </p>
-<p>// 显示摘要而非整个 diff<br>git diff –stat </p>
-<p>// 添加文件到本地暂存区<br>git add filename.txt</p>
-<p>// 添加所有文件到本地暂存区<br>git add -A || git add .</p>
-<p>// 将暂存区提交到本地HEAD<br>git commit -m “say something”</p>
-<p>// 自动将在提交前将已记录、修改的文件放入缓存区<br>git commit -am “say something”</p>
-<p>// 取消缓存已缓存的内容<br>// 执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。<br>git reset HEAD –<file name=""></file></p>
-<p>// git rm 将文件从缓存区移除<br>// 默认情况下, 会将文件从缓存区和你的硬盘中（工作目录）删除<br>git rm </p>
-<p>// 从缓存区删除，但在工作目录中留该文件<br>git rm –cached</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 分支 branch</div><div class="line">- 什么是分支: - 分支：分支是一个独立的区域。分支之间相互独立，并拥有自己的历史记录。 分支的好处在于:</div></pre></td></tr></table></figure>
-<p>稳定版本的代码不会被破坏<br>不同的功能可以由不同开发者同时开发。<br>开发者可以专注于自己的分支，不用担心被其他人破坏了环境<br>在不确定之前，同一个特性可以拥有几个版本，便于比较<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">分支操作</div></pre></td></tr></table></figure></p>
-<p>// 列出你在本地的分支。你所在的分支的行首会有个星号作标记。 如果你开启了彩色模式，当前分支会用绿色显示<br>git branch</p>
-<p>// 查看所有分支信息<br>git branch -v</p>
-<p>// 新建分支 test<br>git branch <test></test></p>
-<p>// 切换到分支 test<br>git checkout <test></test></p>
-<p>// 新建并自动切换分支：<br>git checkout -b feature_x</p>
-<p>// 删除分支b<br>git branch -d name_b</p>
-<p>// 强制删除分支<br>git branch -D branchname</p>
-<p>// 合并分支：两个分支 name_a，name_b  把分支b并入分支a<br>git checkout name_a<br>git merge name_b</p>
-<p>// 将分支推送到远端仓库<br>git push origin <branch></branch></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 标签</div><div class="line">给提交打上永久的书签，通常会在切取一个发布版本或者交付一些东西的时候打个标签。</div></pre></td></tr></table></figure>
-<p>// 打标签:-a 选项意为“创建一个带注解的标签”<br>git tag -a v1.0</p>
-<p>// 查看标签记录<br>git tag   </p>
-<p>// 切换标签<br>git checkout v1.0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 远程操作</div></pre></td></tr></table></figure></p>
-<p>// 列出远端别名<br>git remote </p>
-<p>// 列出远端别名, 以及别名的实际链接地址<br>git remote -v</p>
-<p>// 设置remote<br>git remote set-url origin <url></url></p>
-<p>// 为你的项目添加一个新的远端仓库<br>git remote add <alias> <url><br>git remote add origin <a href="https://github.com/tutorialzine/awesome-project.git" target="_blank" rel="external">https://github.com/tutorialzine/awesome-project.git</a></url></alias></p>
-<p>// 删除现存的某个别名<br>git remote rm <alias></alias></p>
-<p>// 从远端仓库提取数据并尝试合并到当前分支<br>git pull origin master</p>
-<p>// 从远端仓库下载新分支与数据<br>// git pull = git fetch + git merge github/master<br>git fetch</p>
-<p>// 提交修改到远端仓库， 其中master是远端仓库分支名， 可替换成任意分支。<br>git push origin master</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 查看提交历史 log</div></pre></td></tr></table></figure>
-<p>// 显示一个分支中提交的更改记录<br>git log</p>
-<p>// id 很长，但是你并不需要复制整个字符串，前一小部分就够了。<br>// b10cc1238e355c02a044ef9f9860811ff605c9b4<br>git show b10cc1238e35</p>
-<p>// git diff [commit-from]..[commit-to]<br>git diff 09bd8cc..ba25c0ff</p>
-<p>// 查看某人的提交<br>git log –author==david</p>
-<p>// 一个压缩后的每一条提交记录只占一行的输出<br>git log –pretty=oneline</p>
-<p>// 帮助<br>git log –help</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">#### 撤销</div></pre></td></tr></table></figure>
-<p>// git checkout 版本号 文件全路径<br>git checkout 09bd8cc1 hello.txt</p>
-<p>// HEAD是最新提交的别名<br>git revert HEAD<br>git revert b10cc123</p>
-<p>// 用 HEAD 中的最新内容替换掉你的工作目录中的文件。已添加到暂存区的改动以及新文件都不会受到影响。<br>git checkout – <filename></filename></p>
-<p>// 丢弃你在本地的所有改动与提交<br>git fetch origin<br>git reset –hard origin/master</p>
-<p>// git删除本地所有未提交的更改，包括修改的、新增的、删除的，还有一些编译生成的临时文件。回到上一版本的干净状态.<br>// 如果有修改加入暂存区<br>git reset –hard<br>git clean -xdf </p>
-<p>// 如果没有加入暂存区<br>git checkout .<br>git clean -xdf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### tips</div></pre></td></tr></table></figure>
-<p>// 内建的图形化 git：<br>gitk</p>
-<p>// 彩色的 git 输出：<br>git config color.ui true</p>
-<p>// 显示历史记录时，每个提交的信息只显示一行：<br>git config format.pretty oneline</p>
-<p>```</p>
+<h4 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// 查看文件在缓存与当前工作目录的状态: </div><div class="line">git status </div><div class="line"></div><div class="line">// 显示已写入缓存与已修改但尚未写入缓存的改动的区别</div><div class="line">git diff </div><div class="line"></div><div class="line">// 查看已缓存的改动</div><div class="line">git diff --cached</div><div class="line"></div><div class="line">// 查看已缓存的与未缓存的所有改动</div><div class="line">git diff HEAD </div><div class="line"></div><div class="line">// 显示摘要而非整个 diff</div><div class="line">git diff --stat </div><div class="line"></div><div class="line">// 添加文件到本地暂存区</div><div class="line">git add filename.txt</div><div class="line"></div><div class="line">// 添加所有文件到本地暂存区</div><div class="line">git add -A || git add .</div><div class="line"></div><div class="line">// 将暂存区提交到本地HEAD</div><div class="line">git commit -m &quot;say something&quot;</div><div class="line"></div><div class="line">// 自动将在提交前将已记录、修改的文件放入缓存区</div><div class="line">git commit -am &quot;say something&quot;</div><div class="line"></div><div class="line">// 取消缓存已缓存的内容</div><div class="line">// 执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。</div><div class="line">git reset HEAD --&lt;file name&gt;</div><div class="line"></div><div class="line">// git rm 将文件从缓存区移除</div><div class="line">// 默认情况下, 会将文件从缓存区和你的硬盘中（工作目录）删除</div><div class="line">git rm </div><div class="line"></div><div class="line">// 从缓存区删除，但在工作目录中留该文件 </div><div class="line">git rm --cached</div></pre></td></tr></table></figure>
+<h4 id="分支-branch"><a href="#分支-branch" class="headerlink" title="分支 branch"></a>分支 branch</h4><ul>
+<li>什么是分支: - 分支：分支是一个独立的区域。分支之间相互独立，并拥有自己的历史记录。 分支的好处在于:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">稳定版本的代码不会被破坏</div><div class="line">不同的功能可以由不同开发者同时开发。</div><div class="line">开发者可以专注于自己的分支，不用担心被其他人破坏了环境</div><div class="line">在不确定之前，同一个特性可以拥有几个版本，便于比较</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>分支操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">// 列出你在本地的分支。你所在的分支的行首会有个星号作标记。 如果你开启了彩色模式，当前分支会用绿色显示</div><div class="line">git branch</div><div class="line"></div><div class="line">// 查看所有分支信息</div><div class="line">git branch -v</div><div class="line"></div><div class="line">// 新建分支 test</div><div class="line">git branch &lt;test&gt;</div><div class="line"></div><div class="line">// 切换到分支 test</div><div class="line">git checkout &lt;test&gt;</div><div class="line"></div><div class="line">// 新建并自动切换分支：</div><div class="line">git checkout -b feature_x</div><div class="line"></div><div class="line">// 删除分支b</div><div class="line">git branch -d name_b</div><div class="line"></div><div class="line">// 强制删除分支    </div><div class="line">git branch -D branchname</div><div class="line"></div><div class="line">// 合并分支：两个分支 name_a，name_b  把分支b并入分支a</div><div class="line">git checkout name_a</div><div class="line">git merge name_b</div><div class="line"></div><div class="line">// 将分支推送到远端仓库</div><div class="line">git push origin &lt;branch&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p>给提交打上永久的书签，通常会在切取一个发布版本或者交付一些东西的时候打个标签。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 打标签:-a 选项意为“创建一个带注解的标签”   </div><div class="line">git tag -a v1.0</div><div class="line"></div><div class="line">// 查看标签记录</div><div class="line">git tag   </div><div class="line"></div><div class="line">// 切换标签        </div><div class="line">git checkout v1.0</div></pre></td></tr></table></figure></p>
+<h4 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">// 列出远端别名</div><div class="line">git remote </div><div class="line"></div><div class="line">// 列出远端别名, 以及别名的实际链接地址</div><div class="line">git remote -v</div><div class="line"></div><div class="line">// 设置remote</div><div class="line">git remote set-url origin &lt;url&gt;</div><div class="line"></div><div class="line">// 为你的项目添加一个新的远端仓库</div><div class="line">git remote add &lt;alias&gt; &lt;url&gt;</div><div class="line">git remote add origin https://github.com/tutorialzine/awesome-project.git</div><div class="line"></div><div class="line">// 删除现存的某个别名</div><div class="line">git remote rm &lt;alias&gt;</div><div class="line"></div><div class="line">// 从远端仓库提取数据并尝试合并到当前分支</div><div class="line">git pull origin master</div><div class="line"></div><div class="line">// 从远端仓库下载新分支与数据</div><div class="line">// git pull = git fetch + git merge github/master</div><div class="line">git fetch</div><div class="line"></div><div class="line">// 提交修改到远端仓库， 其中master是远端仓库分支名， 可替换成任意分支。</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<h4 id="查看提交历史-log"><a href="#查看提交历史-log" class="headerlink" title="查看提交历史 log"></a>查看提交历史 log</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// 显示一个分支中提交的更改记录</div><div class="line">git log</div><div class="line"></div><div class="line">// id 很长，但是你并不需要复制整个字符串，前一小部分就够了。</div><div class="line">// b10cc1238e355c02a044ef9f9860811ff605c9b4</div><div class="line">git show b10cc1238e35</div><div class="line"></div><div class="line">// git diff [commit-from]..[commit-to] </div><div class="line">git diff 09bd8cc..ba25c0ff</div><div class="line"></div><div class="line">// 查看某人的提交</div><div class="line">git log --author==david</div><div class="line"></div><div class="line">// 一个压缩后的每一条提交记录只占一行的输出</div><div class="line">git log --pretty=oneline</div><div class="line"></div><div class="line">// 帮助</div><div class="line">git log --help</div></pre></td></tr></table></figure>
+<h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">// git checkout 版本号 文件全路径</div><div class="line">git checkout 09bd8cc1 hello.txt</div><div class="line"></div><div class="line">// HEAD是最新提交的别名</div><div class="line">git revert HEAD</div><div class="line">git revert b10cc123</div><div class="line"></div><div class="line">// 用 HEAD 中的最新内容替换掉你的工作目录中的文件。已添加到暂存区的改动以及新文件都不会受到影响。</div><div class="line">git checkout -- &lt;filename&gt;</div><div class="line"></div><div class="line">// 丢弃你在本地的所有改动与提交</div><div class="line">git fetch origin</div><div class="line">git reset --hard origin/master</div><div class="line"></div><div class="line">// git删除本地所有未提交的更改，包括修改的、新增的、删除的，还有一些编译生成的临时文件。回到上一版本的干净状态.</div><div class="line">// 如果有修改加入暂存区 </div><div class="line">git reset --hard </div><div class="line">git clean -xdf </div><div class="line"></div><div class="line">// 如果没有加入暂存区</div><div class="line">git checkout .</div><div class="line">git clean -xdf</div></pre></td></tr></table></figure>
+<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 内建的图形化 git：</div><div class="line">gitk</div><div class="line"></div><div class="line">// 彩色的 git 输出：</div><div class="line">git config color.ui true</div><div class="line"></div><div class="line">// 显示历史记录时，每个提交的信息只显示一行：</div><div class="line">git config format.pretty oneline</div></pre></td></tr></table></figure>
 
       
     </div>
